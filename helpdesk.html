@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CWA Help Desk Appointment</title>
+</head>
+
+<body>
+    <a href="http://www.swin.edu.au">
+        <img src="logo.png" alt="Swinburne Logo" title="Swinburne Logo"></a>
+
+    <h1>CWA Help Desk Appointment</h1>
+    <p>The Help Desk is located in ATC620 Open 10:30 to 19:00 Monday to Friday.</p>
+    <p>Check Blackboard for when CWA tutors will be there.</p>
+
+    <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+        <fieldset>
+            <legend>Student details</legend>
+            <p>
+                <label for="StudentID">Student ID</label>
+                <input type="text" name="StudentID" id="StudentID" pattern="[A-Za-z0-9]{7,10}" required>
+            </p>
+
+            <p>
+                <label for="GivenName">Given Name</label>
+                <input type="text" name="GivenName" id="GivenName" maxlength="15" size="16" pattern="[A-Za-z ]+" required>
+
+                <label for="FamilyName">Family Name</label>
+                <input type="text" name="FamilyName" id="FamilyName" maxlength="15" size="16" pattern="[A-Za-z ]+" required>
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Your unit</legend>
+            <p>
+                <input type="radio" id="COS10011" name="unit" value="COS10011" required>
+                <label for="COS10011">COS10011</label>
+
+                <input type="radio" id="COS60004" name="unit" value="COS60004" required >
+                <label for="COS60004">COS60004</label>
+
+                <input type="radio" id="COS60007" name="unit" value="COS60007">
+                <label for="COS60007">COS60007</label>
+            </p>
+
+            <p>
+                <label for="tutor">Your Tutor</label>
+                <select name="tutor" id="tutor" required>
+                    <option value="">Please Select</option>
+                    <option value="Tutor 1">Tutor 1</option>
+                    <option value="Tutor 2">Tutor 2</option>
+                    <option value="Tutor 3">Tutor 3</option>
+                    <option value="Tutor 4">Tutor 4</option>
+                </select>
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Issue</legend>
+            <p>
+                <label>
+                    <input type="checkbox" name="issue[]" value="HTML" checked>HTML
+                </label>
+
+                <label>
+                    <input type="checkbox" name="issue[]" value="CSS">CSS
+                </label>
+
+                <label>
+                    <input type="checkbox" name="issue[]" value="JavaScript">JavaScript
+                </label>
+
+                <label>
+                    <input type="checkbox" name="issue[]" value="PHP">PHP
+                </label>
+
+                <label>
+                    <input type="checkbox" name="issue[]" value="MySQL">MySQL
+                </label>
+            </p>
+
+            <p>
+                <label for="description">Description of Issue</label>
+            </p>
+
+            <p>
+                <textarea name="description" id="description"
+                    placeholder="Write description of your problem here..."></textarea>
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferred Date / Time</legend>
+            <p><label for="date">Date</label>
+                <!--<input type="date" name="date" id="date" placeholder="mm/dd/yyyy">-->
+                <input type ="text" name = "date" id="date" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}">
+             </p>
+
+            <p>
+                <label for="time">Time</label>
+                <!--<input type="time" name="time" id="time" placeholder="00:00">-->
+                <input type="text" name="time" id="time" placeholder="00:00" pattern="\d{2}:\d{2}"> 
+            </p>
+
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Book">
+            <input type="reset" value="Reset form">
+        </p>
+
+
+    </form>
+
+</body>
+</html>
